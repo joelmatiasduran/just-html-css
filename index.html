@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Just Html and CSS</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/logo-white.svg" alt="23andfour logo" class="logo">
+
+            <nav>
+                <a href="#" class="hide-desktop">
+                    <img src="images/ham.svg" alt="toggle menu" class="menu" id="menu">
+                </a>
+
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn hide-desktop">
+                        <img src="images/exit.svg" alt="exit menu">
+                    </li>
+                    <li><a href="#" class="nav-font">Home</a></li>
+                    <li><a href="#services" class="nav-font">Services</a></li>
+                    <li><a href="#" class="nav-font">About</a></li>
+                    <li><a href="#contact" class="nav-font">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="Main-Title">
+           <!--<img src="images/eth2.png" alt="server graphic" class="server">--> 
+            
+            <h1>Hi! I'm Joel Matias Duran</h1>
+            <p class="subhead">Front-End Developer</p>
+
+            <img src="images/scroll.svg" alt="scroll down" class="scroll hide-mobile show-desktop">
+        </section>
+    </div>
+
+    <div class="blue-container">
+        <div class="container" id="services">
+            <ul>
+                <li>
+                    <img src="images/icon-1.svg" class="image-tools" alt="Calendar icon">
+                    <h2>React</h2>
+                </li>
+                <li>
+                    <img src="images/icon-2.svg"  class="image-tools" alt="Calendar icon">
+                    <h2>GraphQl</h2>
+                </li>
+
+                <li>
+                    <img src="images/icon-2.svg" class="image-tools" alt="Calendar icon">
+                    <h2>JavaScript</h2>
+                </li>
+                <li>
+                    <img src="images/icon-3.svg" alt="Calendar icon">
+                    <h2>Python</h2>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="gray-container">
+        <div class="container">
+            <ul>
+                <li>
+                   <h2>Front-End Developer</h2>
+                   <h2>Tools:</h2>
+                   <h2>JavaScript</h2>
+                   <h2>Python</h2>
+                   <h2>React</h2>
+                   <h2>Ruby on Rails</h2>
+                </li> 
+                <li>
+                    <figure>
+                        <img src="images/doge3.png" alt="DogeCoin Picture" id="doge-picture">
+                        <blockquote>I love giving life designs by using the latest technologies</blockquote>
+                        <figcaption>- Joel Matias Duran</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Start your free trial now!</h2>
+        <div id="appdoge"></div>
+        <a href="#" class="cta">Get In Touch</a>
+    </div>
+
+    <footer>
+        <div class="footer-container" id="contact">
+            <div class="container">
+                <a href="#">
+                    <img src="images/logo.svg" class="logo" alt="logo">
+                </a>
+                <p class="address">Buenos Aires, Palermo<br>Argentina</p>
+                <ul class="footer-links">
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">jmatiimartinez@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+
+        
+        function fetchData(){
+            fetch('https://api.coingecko.com/api/v3/simple/price?ids=dogecoin&vs_currencies=usd&include_market_cap=true')
+            .then(response => {
+                if (!response.ok){
+                    throw Error('ERROR')
+                }
+                return response.json();
+                
+            }).then(data => {
+                console.log(data.dogecoin.usd)
+                const dogeprice = data.dogecoin.usd
+
+                document
+                    .querySelector("#appdoge")  
+                    .innerHTML=("afterbegin", `
+                        <div class="dogecrazy">
+                            <h1>DogeCoin Price: <span id="dogeprice">${dogeprice} 🚀</span></h1>
+                        </div>
+                        `)
+            }).catch(error => {
+                console.log('ERROR')
+            });  
+        }
+        
+           fetchData();
+            
+            setInterval(fetchData, 5000);  
+
+    
+        
+        //Different
+        
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var exit = document.getElementById('exit');
+
+        menu.addEventListener('click', function(e) {
+            nav.classList.toggle('hide-mobile');
+            e.preventDefault();
+        });
+
+        exit.addEventListener('click', function(e) {
+            nav.classList.add('hide-mobile');
+            e.preventDefault();
+        });
+
+    </script>
+
+</body>
+</html>
