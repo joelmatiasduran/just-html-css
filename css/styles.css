@@ -302,25 +302,33 @@ nav ul li a:hover {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     
 }
-.grid-card{
-    animation: movecard 1s infinite alternate;
-}
+
 .grid-card:hover{
     transition-timing-function: ease-in-out;
     transition-duration: 1s;
     color: rgb(255, 0, 76);
-    animation: movecard 1s infinite linear;
+    
 }
+#react-svg,#python-svg,#graphql-svg,#javascript-svg{
+    animation: movecard 6s infinite linear;
+}
+
+
+
+
 
 @keyframes movecard {
     from {
-       transform: translateY(20px);
+       transform: rotate(0deg);
     }
     to {
-        transform: translateY(0px);
+        transform: rotate(360deg);
     }
 
 }
+
+
+
 .exit-btn {
     margin-bottom: 1em;
     margin-top: -1.3em;
@@ -342,8 +350,8 @@ nav ul li a:hover {
 #python-svg:hover{
     transition-duration: .5s;
     transition-timing-function: ease-in-out;
-    animation: infinite;
-    transform: rotate(360deg);
+   
+    
 }
  
 #react-svg{
