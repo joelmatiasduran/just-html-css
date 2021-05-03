@@ -87,6 +87,7 @@
     <div class="container">
         <h2>Start your free trial now!</h2>
         <div id="appdoge"></div>
+        <div id="appdoge2"></div>
         <a href="#" class="cta">Get In Touch</a>
     </div>
 
@@ -125,14 +126,39 @@
                     .querySelector("#appdoge")  
                     .innerHTML=("afterbegin", `
                         <div class="dogecrazy">
-                            <h1>DogeCoin Price: <span id="dogeprice">${dogeprice} 🚀</span></h1>
+                            <h1>DogeCoin Price: <span id="dogeprice">$${dogeprice} 🚀</span></h1>
                         </div>
                         `)
             }).catch(error => {
                 console.log('ERROR')
             });  
         }
-        
+    
+        /*
+        function fetchDataB(){
+            fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_market_cap=true')
+            .then(response => {
+                if (!response.ok){
+                    throw Error('ERROR')
+                }
+                return response.json();
+                
+            }).then(data => {
+                console.log(data.bitcoin.usd)
+                const btcprice = data.bitcoin.usd
+
+                document
+                    .querySelector("#appdoge2")  
+                    .innerHTML=("afterbegin", `
+                        <div class="dogecrazy">
+                            <h1>Bitcoin Price: <span id="btcprice">$${btcprice} 🚀</span></h1>
+                        </div>
+                        `)
+            }).catch(error => {
+                console.log('ERROR')
+            });  
+        }
+           fetchDataB();*/
            fetchData();
             
             setInterval(fetchData, 5000);  
