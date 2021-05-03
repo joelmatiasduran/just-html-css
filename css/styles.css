@@ -199,6 +199,12 @@ h2 {
     
 }
 
+#btcprice{
+    color:#ff008c ;
+    animation: dogeAnim 5s infinite alternate;
+    
+}
+
 
 
 @keyframes dogeAnim {
@@ -286,8 +292,8 @@ nav ul li a:hover {
     color: rgb(172, 153, 153);
 }
 .tools-container{
+    align-items: center;
     color: white;
-    margin-left: 8em;
     display: grid;
     gap: .5rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -376,6 +382,8 @@ nav ul li a:hover {
 
 @media only screen and (min-width: 650px)  {
 
+   
+
     .server {
         width: 50%;
     }
@@ -405,6 +413,7 @@ nav ul li a:hover {
         align-items: center;
     }
 
+    
     .blue-container ul li {
         margin-bottom: 0;
     }
@@ -429,6 +438,12 @@ nav ul li a:hover {
         margin-bottom: 15%;
     }
 
+    .tools-container{
+        margin-left: 8em;
+    }
+
+
+
     .blue-container ul {
         margin: 0 0 4% 0;
     }
@@ -438,11 +453,15 @@ nav ul li a:hover {
     }
 
 }
-
+ 
 @media only screen and (min-width: 1024px)  {
 
     .cta {
         width: 50%;
+    }
+
+    .tools-container{
+        margin-left: 8em;
     }
 
     .container {
