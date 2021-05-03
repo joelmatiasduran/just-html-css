@@ -394,7 +394,10 @@ nav ul li a:hover {
         margin: 0;
     }
 
-
+    
+    .tools-container{
+        align-items: center;
+    }
     
 
     .blue-container ul li:nth-child(3) img {
