@@ -284,7 +284,7 @@ nav ul li a {
     display: block;
     width: 100%;
     padding: 1em 2em;
-    background-color: rgb(49, 55, 59);
+    background-color: #31373b;
 }
 
 nav ul li a:hover {
@@ -292,15 +292,15 @@ nav ul li a:hover {
     color: rgb(172, 153, 153);
 }
 .tools-container{
-    align-items: center;
+    
+    text-align: center;
     color: white;
     display: grid;
     gap: .5rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: repeat(12, 1fr);
     grid-template-columns: repeat(12, minmax(240px, 1fr));
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    
 }
 
 .grid-card:hover{
@@ -389,9 +389,11 @@ nav ul li a:hover {
 }
 
 @media only screen and (min-width: 650px)  {
-
+ 
+    .tools-container{
+        text-align: center;
+    }   
    
-
     .server {
         width: 50%;
     }
@@ -400,35 +402,13 @@ nav ul li a:hover {
         font-size: 3em;
         margin: 0;
     }
-
+   
     .subhead {
         font-size: 1.4em;
         margin-bottom: 12%;
     }
 
-    .blue-container {
-        margin: 0;
-    }
-
-    .blue-container ul li:nth-child(3) img {
-        width: 11%;
-        margin-top: -6px;
-    }
-
-    .blue-container ul {
-        display: flex;
-        margin-top: -1em;
-        align-items: center;
-    }
-
-    
-    .blue-container ul li {
-        margin-bottom: 0;
-    }
-
-    .blue-container ul li p {
-        padding: 0 .8em;
-    }
+   
 
     .gray-container ul {
         display: flex;
@@ -445,12 +425,13 @@ nav ul li a:hover {
     .subhead {
         margin-bottom: 15%;
     }
-
+   
     .tools-container{
-        margin-left: 8em;
+        text-align: center;
     }
+    
 
-
+    
 
     .blue-container ul {
         margin: 0 0 4% 0;
@@ -469,7 +450,8 @@ nav ul li a:hover {
     }
 
     .tools-container{
-        margin-left: 8em;
+        text-align: center;
+        margin-left: 2em;
     }
 
     .container {
@@ -510,6 +492,8 @@ nav ul li a:hover {
         background-color: inherit;
     }
 
+   
+
     .scroll {
         width: 30px;
         animation: move 1s infinite alternate;
@@ -536,11 +520,13 @@ nav ul li a:hover {
     .container {
         width: 70%;
     }
-
+    
+    
     .blue-container {
         padding: 7em 0 2em;
     }
-
+     
+    
     .blue-container ul li p, blockquote {
         font-size: 1.3em;
     }
