@@ -303,14 +303,48 @@ nav ul li a:hover {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
+.grid-card{
+    text-decoration: none;
+    padding-top: 1.5em;
+   
+    border: 2px solid rgba(0, 204, 255, 0);
+    
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover{
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    color: rgb(255, 0, 76);
+    text-decoration: none;
+}
+
 .grid-card:hover{
+    /*transform: scale(1.09);*/
     transition-timing-function: ease-in-out;
     transition-duration: 1s;
     color: rgb(255, 0, 76);
     
+
+    
 }
 #react-svg,#python-svg,#graphql-svg,#javascript-svg{
     animation: movecard 6s infinite linear;
+    border-radius: 30%;
+    /*border: 2px solid rgba(0, 204, 255, 0);*/
+    
+}
+
+#react-svg:hover,#python-svg:hover,#graphql-svg:hover,#javascript-svg:hover{
+
+    transition-timing-function: ease-in-out;
+    
+  /*  border: 2px solid rgb(0, 204, 255);*/
+    
 }
 
 
