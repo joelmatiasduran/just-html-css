@@ -44,20 +44,28 @@
     <div class="tools-container">
         
                     <div class="grid-card">
-                        <img src="images/icon-1.svg" class="image-size" alt="React icon" id="react-svg">
-                        <h2>React</h2>
+                        <a href="https://reactjs.org/" target="_blank">
+                            <img src="images/icon-1.svg" class="image-size" alt="React icon" id="react-svg">
+                            <h2>React</h2>
+                        </a>
                     </div>
                     <div class="grid-card">
-                        <img src="images/graphql.svg"  class="image-size" alt="GraphQl icon" id="graphql-svg">
-                        <h2>GraphQl</h2>
+                        <a href="https://graphql.org/" target="_blank">
+                            <img src="images/graphql.svg"  class="image-size" alt="GraphQl icon" id="graphql-svg">
+                            <h2>GraphQl</h2>
+                        </a>
                     </div> 
                     <div class="grid-card">
-                        <img src="images/javascript-2.svg" class="image-size" alt="JavaScript icon" id="javascript-svg">
-                        <h2>JavaScript</h2>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+                            <img src="images/javascript-2.svg" class="image-size" alt="JavaScript icon" id="javascript-svg">
+                            <h2>JavaScript</h2>
+                        </a>
                     </div>
                     <div class="grid-card">
-                        <img src="images/python-2.svg" alt="Python icon" class="image-size" id="python-svg">
-                        <h2>Python</h2>
+                        <a href="#" target="_blank">
+                            <img src="images/python-2.svg" alt="Python icon" class="image-size" id="python-svg">
+                            <h2>Python</h2>
+                        </a>
                     </div>
         
     </div>
@@ -68,10 +76,11 @@
                 <li>
                    <h2>Front-End Developer</h2>
                    <h2>Tools:</h2>
-                   <h2>JavaScript</h2>
+                   <h2>HTML, CSS & JavaScript</h2>
+                   <h2>Git and GitHub</h2>
                    <h2>Python</h2>
-                   <h2>React</h2>
-                   <h2>Ruby on Rails</h2>
+                   <h2>React Js / Expo</h2>
+                   <h2>Axios / API</h2>
                 </li> 
                 <li>
                     <figure>
@@ -85,10 +94,10 @@
     </div>
 
     <div class="container">
-        <h2>Start your free trial now!</h2>
+        <h2 class="">Get in touch and let's make something!</h2>
         <div id="appdoge"></div>
         <div id="appdoge2"></div>
-        <a href="#" class="cta">Get In Touch</a>
+        <a href="mailto:jmatiimartinez@gmail.com.com" class="cta">Get In Touch</a>
     </div>
 
     <footer>
@@ -99,8 +108,8 @@
                 </a>
                 <p class="address">Buenos Aires, Palermo<br>Argentina</p>
                 <ul class="footer-links">
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">jmatiimartinez@gmail.com</a></li>
+                    <li><a href="#" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:jmatiimartinez@gmail.com">jmatiimartinez@gmail.com</a></li>
                 </ul>
             </div>
         </div>
@@ -134,31 +143,7 @@
             });  
         }
     
-        /*
-        function fetchDataB(){
-            fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_market_cap=true')
-            .then(response => {
-                if (!response.ok){
-                    throw Error('ERROR')
-                }
-                return response.json();
-                
-            }).then(data => {
-                console.log(data.bitcoin.usd)
-                const btcprice = data.bitcoin.usd
-
-                document
-                    .querySelector("#appdoge2")  
-                    .innerHTML=("afterbegin", `
-                        <div class="dogecrazy">
-                            <h1>Bitcoin Price: <span id="btcprice">$${btcprice} 🚀</span></h1>
-                        </div>
-                        `)
-            }).catch(error => {
-                console.log('ERROR')
-            });  
-        }
-           fetchDataB();*/
+        
            fetchData();
             
             setInterval(fetchData, 5000);  
